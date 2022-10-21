@@ -30,20 +30,20 @@ const clouds = {
 export default function () {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0">
+      <main className="max-w-xl mx-auto px-4 z-20 relative">
+        <Header />
+        <Outlet />
+      </main>
       <div
         // style={nightMode ? nightSky : daySky}
         style={daySky}
-        className="absolute top-0 bottom-0 left-0 right-0 block z-0 h-full"
+        className="absolute top-0 bottom-0 left-0 right-0 block z-0 h-full pointer-events-none"
       ></div>
       <div
         // style={nightMode ? stars : clouds}
         style={clouds}
-        className="absolute top-0 bottom-0 left-0 right-0 block z-10"
+        className="absolute top-0 bottom-0 left-0 right-0 block z-10 pointer-events-none"
       ></div>
-      <main className="max-w-xl mx-auto px-4">
-        <Header />
-        <Outlet />
-      </main>
     </div>
   );
 }
