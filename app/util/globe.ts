@@ -3,6 +3,11 @@ import { GlobeMethods } from "react-globe.gl";
 // import { Country } from "../lib/country";
 import { computeArea, LatLng } from "spherical-geometry-js";
 
+import earthDay from "~/images/earth-day.webp";
+import earthNight from "~/images/earth-night.webp";
+import earthDaySafari from "~/images/safari-14-earth-day.jpg";
+import earthNightSafari from "~/images/safari-14-earth-night.jpg";
+
 export function altitudeFunction(area: number) {
   // This function may seem arbitrary but I made it with a spreadsheet
   // and it made sense there.
@@ -51,8 +56,16 @@ export function turnGlobe(
 export const globeImg = (nightMode: boolean) => {
   const time = nightMode ? "night" : "day";
   if (isSafari && browserVersion < "14") {
-    return `images/safari-14-earth-${time}.jpg`;
+    if (nightMode) {
+      return earthNightSafari;
+    } else {
+      return earthDaySafari;
+    }
   } else {
-    return `images/earth-${time}.webp`;
+    if (nightMode) {
+      return earthNight;
+    } else {
+      return earthDay;
+    }
   }
 };

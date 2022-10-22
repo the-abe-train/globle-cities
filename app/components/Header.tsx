@@ -31,7 +31,7 @@ export default function Header() {
   const svgColour = theme.nightMode ? "rgb(209 213 219)" : "black";
 
   return (
-    <header className="mt-8 h-10 relative dark:text-gray-200 z-10">
+    <header className="pt-8 h-10 relative dark:text-gray-200 z-10">
       <div className="relative h-full">
         <div className="space-x-1 flex absolute left-0 bottom-1">
           <button aria-label="Help">

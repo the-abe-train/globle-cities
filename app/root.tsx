@@ -27,7 +27,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-fit">
+      <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

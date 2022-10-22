@@ -29,8 +29,8 @@ const clouds = {
 
 export default function () {
   return (
-    <div className="fixed top-0 bottom-0 left-0 right-0">
-      <main className="max-w-xl mx-auto px-4 z-20 relative">
+    <div className="relative top-0 bottom-0 left-0 right-0 min-h-screen">
+      <main className="max-w-2xl mx-auto px-4 py-8 z-20 relative">
         <Header />
         <Outlet />
       </main>
